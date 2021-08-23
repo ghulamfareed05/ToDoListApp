@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ToDoListApp</string>
+    <string name="title">My Day</string>
+    <string name="date">Friday, July 21</string>
+    <string-array name="snooze_times">
+        <item>Select</item>
+        <item>No repeat</item>
+        <item>Once a Day</item>
+        <item>Once a Day (Mon-Fri)</item>
+        <item>Once a Weak</item>
+        <item>Once a Month</item>
+        <item>Once a Year</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="add_to_list">
+        <item>Default</item>
+        <item>Personal</item>
+        <item>Shopping</item>
+        <item>Wishlist</item>
+        <item>Work</item>
+    </string-array>
+</resources>
