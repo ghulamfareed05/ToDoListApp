@@ -35,7 +35,7 @@ public class SqlHelper extends SQLiteOpenHelper {
         db.execSQL(second_query);
         String query = "Create Table If Not Exists "+ REMINDER_TABLE+"(" +
                  ID+" integer primary key autoincrement," +
-                 LIST_NAME+" varchar(25) NOT NULL,"+
+                 LIST_NAME+" varchar(35) NOT NULL,"+
                  NOTES+" text Not null," +
                  DUE_DATE+" varchar(30)," +
                  DUE_TIME+" varchar(15)," +

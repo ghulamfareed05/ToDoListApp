@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.float_btn).setOnClickListener(this);
+
         SqlHelper sqlHelper = new SqlHelper(getApplicationContext(),SqlHelper.DB_NAME);
         Cursor cursor = sqlHelper.getReadableDatabase().rawQuery("Select * from "+ SqlHelper.REMINDER_TABLE,null);
         ArrayList<ReminderModel> reminderModels = new ArrayList<>();

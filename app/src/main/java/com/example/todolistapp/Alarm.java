@@ -17,6 +17,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,6 +29,7 @@ import androidx.core.view.KeyEventDispatcher;
 
 import java.io.IOException;
 
+import static androidx.legacy.content.WakefulBroadcastReceiver.completeWakefulIntent;
 import static androidx.legacy.content.WakefulBroadcastReceiver.startWakefulService;
 
 public class Alarm extends BroadcastReceiver {
@@ -43,9 +46,14 @@ public class Alarm extends BroadcastReceiver {
 
         MediaPlayer mediaPlayer = MediaPlayer.create(context,R.raw.ring);
         mediaPlayer.start();
+//        Intent intent1 = new Intent();
+//        intent1.setClassName("com.example.todolistapp","com.example.todolistapp.SnoozeSet");
+        Intent intent1 = new Intent(context,SnoozeSet.class);
+        intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent1);
 //        Ringtone ringtone = RingtoneManager.getRingtone(context, uriAlarm);
 //        ringtone.play();
-        String s = intent.getExtras().get("M").toString();
+//        String s = intent.getExtras().get("M").toString();
         ComponentName componentName = new ComponentName(context.getPackageName(), AlarmServices.class.getName());
         AlarmServices.enqueueWork(context,componentName,1,intent);
 

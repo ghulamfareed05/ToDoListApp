@@ -65,8 +65,7 @@
             android:layout_width="@dimen/_180sdp"
             android:layout_height="wrap_content"
             android:hint="Date not set"
-            android:textAppearance="?android:textAppearanceLarge"
-            />
+            android:textAppearance="?android:textAppearanceLarge" />
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dip"
@@ -144,7 +143,7 @@
 
 
                 <Spinner
-                    android:id="@+id/snooze_time"
+                    android:id="@+id/repeat_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:entries="@array/snooze_times"
